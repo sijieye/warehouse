@@ -40,6 +40,8 @@ jobs:
           keyvault: "warehouseautoKey" # name of key vault in Azure portal
           secrets: 'host--functionKey--rotate'  # comma separated list of secret keys to fetch from key vault 
         id: myGetSecretAction # ID for secrets that you will reference
+      - name: Print name
+          bash: | echo ${{ steps.myGetSecretAction.outputs.secrets }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
