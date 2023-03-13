@@ -1,3 +1,6 @@
+require('dotenv').config();
+
+
 export const BASE_API_URL = "https://warehouseautomate.azurewebsites.net/api";
 export const GET_DEFAULT_HEADERS = () => {
     var headers = new Headers();
