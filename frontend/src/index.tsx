@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+export const api_key = process.env.REACT_APP_API_KEY as string;
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
