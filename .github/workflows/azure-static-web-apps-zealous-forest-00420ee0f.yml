@@ -22,6 +22,9 @@ jobs:
         uses: azure/login@v1
         with:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - name: Print name
+        run: |
+          echo ${{steps.myGetSecretAction.outputs.secrets}}
       - uses: Azure/get-keyvault-secrets@v1
         with:
           keyvault: "warehouseautoKey" # name of key vault in Azure portal
