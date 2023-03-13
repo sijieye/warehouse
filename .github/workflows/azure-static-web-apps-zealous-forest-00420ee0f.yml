@@ -41,7 +41,7 @@ jobs:
           secrets: 'host--functionKey--rotate'  # comma separated list of secret keys to fetch from key vault 
         id: myGetSecretAction # ID for secrets that you will reference
       - name: Print name
-          run: echo ${{ steps.myGetSecretAction.outputs.secrets }}
+          run: echo "hello"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
