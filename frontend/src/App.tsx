@@ -34,6 +34,7 @@ function App() {
   
   const idLs = async () => {
     getApiKey();
+    console.log(apiKey)
 
     const res = await fetch(BASE_API_URL + "/allID", {
       method: "GET",
