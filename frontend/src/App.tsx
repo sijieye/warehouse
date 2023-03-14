@@ -30,7 +30,6 @@ function App() {
     setApiKey(json);
   };
   
-  getApiKey();
   
   const idLs = async () => {
     console.log("Overhere:", apiKey);
@@ -57,6 +56,12 @@ function App() {
     setShipmentsLs(json);
     return;
   };
+
+  useEffect(() => {
+    getApiKey();
+    console.log("Here: ", apiKey)
+
+  }, []);
 
   useEffect(() => {
     if(apiKey){
