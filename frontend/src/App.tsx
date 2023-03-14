@@ -42,7 +42,7 @@ function App() {
     })
   
     const json = await res.text();
-    console.log("Op: ",json);
+    console.log("Op: ", json);
   
     setApiKey(json);
     idLs();
@@ -64,7 +64,7 @@ function App() {
     getApiKey();
     console.log("Here: ", apiKey)
 
-  });
+  }, []);
 
   useEffect(() => {
     // idLs();
