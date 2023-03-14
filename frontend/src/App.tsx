@@ -27,13 +27,13 @@ function App() {
   
     const json = await res.json();
   
-    setApiKey(json.apiKey);
+    setApiKey(json);
   };
   
 
   
   const idLs = async () => {
-    getApiKey();
+    await getApiKey();
     console.log(apiKey)
 
     const res = await fetch(BASE_API_URL + "/allID", {
