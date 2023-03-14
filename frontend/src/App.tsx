@@ -18,7 +18,19 @@ function App() {
   const [currShipperID, setCurrShipperID] = useState<string>("");
   const [valueSID, setValueSID] = useState<string>("");
   const [shipmentsLs, setShipmentsLs] = useState<ShipmentsClass[]>([]);
+  const [apiKey, setApiKey] = useState<string>("");
 
+  const getApiKey = async () => {
+    const res = await fetch("./api/apiKey", {
+      method: "GET"
+    })
+  
+    const json = await res.json();
+  
+    setApiKey(json);
+  };
+
+  
   const idLs = async () => {
     const res = await fetch(BASE_API_URL + "/allID", {
       method: "GET",
@@ -49,6 +61,9 @@ function App() {
     if(valueSID){
       idShipments();
     }
+
+    getApiKey();
+    console.log(apiKey)
 
 
   }, [currShipperID]);
