@@ -74,7 +74,7 @@ function App() {
     }
   
 
-  }, [apiKey, currShipperID]);
+  }, [currShipperID]);
 
   const handleChange = (event: SelectChangeEvent) => {
     const shipperID = event.target.value;
