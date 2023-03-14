@@ -41,7 +41,7 @@ function App() {
       method: "GET"
     })
   
-    const json = await res.json();
+    const json = await res.text();
     console.log("Op: ",json);
   
     setApiKey(json);
