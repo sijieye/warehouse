@@ -21,7 +21,7 @@ function App() {
   const [apiKey, setApiKey] = useState<string>("");
 
   const getApiKey = async () => {
-    const res = await fetch("./api/apiKey", {
+    const res = await fetch("../../api/apiKey", {
       method: "GET"
     })
   
