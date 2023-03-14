@@ -27,7 +27,7 @@ function App() {
   
     const json = await res.json();
   
-    setApiKey(json);
+    setApiKey(json.apiKey);
   };
 
   
