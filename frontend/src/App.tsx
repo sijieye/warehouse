@@ -61,7 +61,7 @@ function App() {
     getApiKey();
     console.log("Here: ", apiKey)
 
-  }, []);
+  });
 
   useEffect(() => {
     if(apiKey){
