@@ -45,7 +45,6 @@ function App() {
     console.log("Op: ", json);
   
     setApiKey(json);
-    idLs();
   };
 
   const idShipments = async () => {
@@ -67,7 +66,12 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // idLs();
+    idLs();
+
+
+  }, [apiKey]);
+
+  useEffect(() => {
 
     if(valueSID){
       idShipments();
