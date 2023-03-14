@@ -64,13 +64,12 @@ function App() {
   });
 
   useEffect(() => {
-    if(apiKey){
-      idLs();
+    idLs();
 
-      if(valueSID){
-        idShipments();
-      }
+    if(valueSID){
+      idShipments();
     }
+  
 
   }, [currShipperID]);
 
