@@ -62,6 +62,7 @@ function App() {
       idShipments();
     }
 
+    getApiKey();
     console.log(apiKey)
 
 
