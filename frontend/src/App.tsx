@@ -29,12 +29,15 @@ function App() {
   
     setApiKey(json.apiKey);
   };
+  
 
   
   const idLs = async () => {
+    getApiKey();
+
     const res = await fetch(BASE_API_URL + "/allID", {
       method: "GET",
-      headers: GET_DEFAULT_HEADERS()
+      headers: GET_DEFAULT_HEADERS(apiKey)
     })
 
     const json = await res.json();
@@ -46,7 +49,7 @@ function App() {
   const idShipments = async () => {
     const res = await fetch(BASE_API_URL + `/shipments/shipperid/${valueSID}`, {
       method: "GET",
-      headers: GET_DEFAULT_HEADERS()
+      headers: GET_DEFAULT_HEADERS(apiKey)
     })
 
     const json = await res.json();
@@ -61,10 +64,6 @@ function App() {
     if(valueSID){
       idShipments();
     }
-
-    getApiKey();
-    console.log(apiKey)
-
 
   }, [currShipperID]);
 
