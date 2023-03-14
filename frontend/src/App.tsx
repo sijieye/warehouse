@@ -27,7 +27,7 @@ function App() {
   
     const json = await res.json();
   
-    setApiKey(json.apiKey);
+    return json;
   };
 
   
@@ -62,8 +62,7 @@ function App() {
       idShipments();
     }
 
-    getApiKey();
-    console.log(apiKey)
+    console.log(getApiKey())
 
 
   }, [currShipperID]);
