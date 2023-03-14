@@ -30,11 +30,10 @@ function App() {
     setApiKey(json);
   };
   
-
+  getApiKey();
   
   const idLs = async () => {
-    await getApiKey();
-    console.log(apiKey)
+    console.log("Overhere:", apiKey);
 
     const res = await fetch(BASE_API_URL + "/allID", {
       method: "GET",
