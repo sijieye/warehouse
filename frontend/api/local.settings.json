@@ -1,0 +1,18 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "WEBSITE_SLOT_NAME": "Production",
+    "FUNCTIONS_EXTENSION_VERSION": "~4",
+    "ScmType": "None",
+    "WEBSITE_AUTH_ENABLED": "False",
+    "WEBSITE_RUN_FROM_PACKAGE": "1",
+    "APPLICATIONINSIGHTS_CONNECTION_STRING": "InstrumentationKey=24ca7a21-7540-4a72-a016-1cb47148acb3;IngestionEndpoint=https://eastus-8.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus.livediagnostics.monitor.azure.com/",
+    "APPINSIGHTS_INSTRUMENTATIONKEY": "24ca7a21-7540-4a72-a016-1cb47148acb3",
+    "WEBSITE_NODE_DEFAULT_VERSION": "18.12.1",
+    "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "DefaultEndpointsProtocol=https;AccountName=waweba526;AccountKey=B2YjCSHJKI4gHlUZGoY6MnPKA/EDQgKKAOu9pVjg753ArOPF893A91FiB21MvFJm9bPS9K8LK7iu+AStplKHVQ==;EndpointSuffix=core.windows.net",
+    "WEBSITE_CONTENTSHARE": "warehousekeya3cc",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "WEBSITE_SITE_NAME": "warehouseKey",
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=waweba526;AccountKey=B2YjCSHJKI4gHlUZGoY6MnPKA/EDQgKKAOu9pVjg753ArOPF893A91FiB21MvFJm9bPS9K8LK7iu+AStplKHVQ==;EndpointSuffix=core.windows.net"
+  }
+}
