@@ -45,6 +45,8 @@ function App() {
     console.log("Op: ", json);
   
     setApiKey(json);
+    console.log("Op2: ", apiKey);
+
   };
 
   const idShipments = async () => {
@@ -65,9 +67,9 @@ function App() {
 
   }, []);
 
+
   useEffect(() => {
     idLs();
-
 
   }, [apiKey]);
 
