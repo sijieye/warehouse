@@ -23,8 +23,6 @@ function App() {
   
   
   const idLs = async () => {
-    console.log("Overhere:", apiKey);
-
     const res = await fetch(BASE_API_URL + "/allID", {
       method: "GET",
       headers: GET_DEFAULT_HEADERS(apiKey)
@@ -42,11 +40,8 @@ function App() {
     })
   
     const json = await res.text();
-    console.log("Op: ", json);
   
     setApiKey(json);
-    // console.log("Op2: ", apiKey);
-
   };
 
   const idShipments = async () => {

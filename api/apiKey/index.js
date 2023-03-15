@@ -3,6 +3,6 @@ module.exports = async function (context, req) {
 
     context.res = {
         // status: 200, /* Defaults to 200 */
-        body: "5Wh4tAgqvuFMxqqxOSydVYeMFzjC0WuqGNyQramc5g6zAzFu-tGs4Q=="
+        body: apiKey;
     };
 }
