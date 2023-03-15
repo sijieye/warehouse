@@ -1,5 +1,8 @@
 # warehouse
 
+## [Github Action](https://github.com/sijieye/warehouse/tree/main/.github/workflows)
+- Contains github action deployment script
+
 ## [API](https://github.com/sijieye/warehouse/tree/main/api)
 - [warehouseautomate](https://github.com/sijieye/warehouse/tree/main/api/warehouseautomate): connected to database and used to retrieve information from backend
 - [warehouseKey](https://github.com/sijieye/warehouse/tree/main/api/warehouseKey): used to retrieve warehouseautomate's key
