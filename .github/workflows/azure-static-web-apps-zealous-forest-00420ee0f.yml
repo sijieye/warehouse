@@ -28,7 +28,7 @@ jobs:
         with:
           azcliversion: 2.0.72
           inlineScript: |
-            az functionapp keys set -g warehouse_function -n warehouseautomate --key-type functionKeys --key-name rotate
+            az functionapp keys set -g wa_web -n warehouseautomate --key-type functionKeys --key-name rotate
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
