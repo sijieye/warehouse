@@ -1,0 +1,27 @@
+﻿{
+  "bindings": [
+    {
+      "name": "req",
+      "authLevel": "function",
+      "methods": [
+        "get"
+      ],
+      "direction": "in",
+      "type": "httpTrigger"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "cosmosDB",
+      "direction": "in",
+      "type": "cosmosDB",
+      "connectionStringSetting": "warehouseKey",
+      "databaseName": "warehouse",
+      "collectionName": "shipment",
+      "sqlQuery": "SELECT DISTINCT VALUE s.ShipperID from shipment s ORDER BY s.ShipperID"
+    }
+  ]
+}

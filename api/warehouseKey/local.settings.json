@@ -1,12 +1,12 @@
 {
   "IsEncrypted": false,
   "Values": {
-    "apiKey": "5Wh4tAgqvuFMxqqxOSydVYeMFzjC0WuqGNyQramc5g6zAzFu-tGs4Q==",
+    "apiKey": "_i0EAz2MGaTAgWd43qAUewWMOncrdAjUPrm3K1xnD5z9AzFu2YwdCQ==",
     "WEBSITE_SLOT_NAME": "Production",
     "FUNCTIONS_EXTENSION_VERSION": "~4",
     "ScmType": "None",
     "WEBSITE_AUTH_ENABLED": "False",
-    "WEBSITE_RUN_FROM_PACKAGE": "1",
+    "WEBSITE_RUN_FROM_PACKAGE": "0",
     "REMOTEDEBUGGINGVERSION": "16.0.32106.67",
     "APPLICATIONINSIGHTS_CONNECTION_STRING": "InstrumentationKey=24ca7a21-7540-4a72-a016-1cb47148acb3;IngestionEndpoint=https://eastus-8.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus.livediagnostics.monitor.azure.com/",
     "FUNCTIONS_RUNTIME_SCALE_MONITORING_ENABLED": "0",

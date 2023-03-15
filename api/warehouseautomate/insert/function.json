@@ -1,0 +1,26 @@
+﻿{
+  "bindings": [
+    {
+      "name": "req",
+      "authLevel": "function",
+      "methods": [
+        "post"
+      ],
+      "direction": "in",
+      "type": "httpTrigger"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "cosmosDB",
+      "direction": "out",
+      "type": "cosmosDB",
+      "connectionStringSetting": "warehouseKey",
+      "databaseName": "warehouse",
+      "collectionName": "shipment"
+    }
+  ]
+}

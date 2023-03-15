@@ -1,9 +1,9 @@
 name: Azure Static Web Apps CI/CD
 
 on:
+  schedule:
+    - cron: "0 0 */30 * *"
   push:
-    paths:
-      - frontend/**
     branches:
       - main
   pull_request:
@@ -42,7 +42,7 @@ jobs:
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "/frontend" # App source code path
-          api_location: "/api" # Api source code pathS- optional
+          api_location: "/api/warehouseKey" # Api source code pathS- optional
           output_location: "build" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
         
