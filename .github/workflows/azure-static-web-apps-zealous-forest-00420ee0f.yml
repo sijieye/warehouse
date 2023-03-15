@@ -29,7 +29,7 @@ jobs:
           inlineScript: |
             az functionapp keys set -g wa_web -n warehouseautomate --key-type functionKeys --key-name rotate
             az functionapp config appsettings set --name warehouseKey --resource-group wa_web --settings apiKey="@Microsoft.KeyVault(VaultName=warehouseautokey;SecretName=host--functionKey--rotate)"
-            Restart-AzFunctionApp -Name warehouseKey -ResourceGroupName wa_web -Force
+            az functionapp restart --name warehouseKey --resource-group wa_web
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
