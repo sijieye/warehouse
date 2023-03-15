@@ -35,7 +35,7 @@ function App() {
   };
 
   const getApiKey = async () => {
-    const res = await fetch("../../api/apiKey", {
+    const res = await fetch("https://warehousekey.azurewebsites.net/api/apikey", {
       method: "GET"
     })
   
