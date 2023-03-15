@@ -1,0 +1,145 @@
+openapi: 3.0.0
+servers:
+  # Added by API Auto Mocking Plugin
+  # Added by API Auto Mocking Plugin
+  # Added by API Auto Mocking Plugin
+  # Added by API Auto Mocking Plugin
+  - url: https://warehouseautomate.azurewebsites.net/api
+info:
+  description: Automating shipment information
+  version: "1.0.0"
+  title: Warehouse Automation API
+tags:
+  - name: shipment
+    description: Information about shipments
+  - name: shipperID
+    description: Information about shipper ID
+paths:
+  /shipments/shipperid/{id}:
+    get:
+      tags:
+        - shipment
+      summary: Get shipment information based on shipper id
+      parameters:
+        - name: id
+          in: path
+          description: ID of shipper
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Shipment'
+  /allID:
+    get:
+      tags:
+        - shipperID
+      summary: Get all shipper id
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IdLs'
+  /insert:
+    post:
+      tags:
+        - shipment
+      summary: Add shipment information
+      responses:
+        '200':
+           description: Successful operation
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/ShipmentReceived'
+            example:
+              Received:   # Example 1
+                [
+                  {
+                      "Date": "Mar 11, 2022",
+                      "WarehouseID": "a908cef7-4c67-40f3-88f7-08a03ba4104e",
+                      "ShippingPO": "3f7b2654-052d-4a4e-905f-87f22a3877a9",
+                      "ShipmentID": "3",
+                      "BoxesRcvd": "5",
+                      "ShipperID": "person1"
+                  },
+                  {
+                      "Date": "Mar 10, 2022",
+                      "WarehouseID": "a908cef7-4c67-40f3-88f7-08a03ba4104e",
+                      "ShippingPO": "71b720e3-2847-45de-bbe7-8fa099d64632",
+                      "ShipmentID": "2",
+                      "BoxesRcvd": "2",
+                      "ShipperID": "person2"
+                  },
+                  {
+                      "Date": "Mar 9, 2022",
+                      "WarehouseID": "a908cef7-4c67-40f3-88f7-08a03ba4104e",
+                      "ShippingPO": "81d06bd2-39e3-427c-9fb3-4e217b9a4d60",
+                      "ShipmentID": "1",
+                      "BoxesRcvd": "12",
+                      "ShipperID": "person1"
+                  }
+              ]
+        description: Shipment information
+        required: true
+components:
+  schemas:
+    ShipmentReceived:
+      type: object
+      properties:
+        Received: 
+          type: array
+          items: 
+            type: object
+            properties:
+              Date:
+                type: string
+              WarehouseID:
+                type: string
+              ShippingPO:
+                type: string
+              ShipmentID:
+                type: integer
+              BoxesRcvd:
+                type: integer
+    Shipment:
+      type: object
+      properties:
+        Date:
+          type: string
+        WarehouseID:
+          type: string
+        ShippingPO:
+          type: string
+        ShipmentID:
+          type: integer
+        BoxesRcvd:
+          type: integer
+        ShipperID:
+          type: string
+    IdLs:
+      type: object
+      properties: 
+        allID: 
+          type: array
+          items: 
+            type: string
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-functions-key
+security:
+  - ApiKeyAuth: []
