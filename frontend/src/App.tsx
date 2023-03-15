@@ -20,8 +20,18 @@ function App() {
   const [shipmentsLs, setShipmentsLs] = useState<ShipmentsClass[]>([]);
   const [apiKey, setApiKey] = useState<string>("");
 
+
   
+  const getApiKey = async () => {
+    const res = await fetch("https://warehousekey.azurewebsites.net/api/apikey", {
+      method: "GET"
+    })
   
+    const json = await res.text();
+  
+    setApiKey(json);
+  };
+
   const idLs = async () => {
     const res = await fetch(BASE_API_URL + "/allID", {
       method: "GET",
@@ -32,16 +42,6 @@ function App() {
 
     setShipperIDList(json.allID);
     return;
-  };
-
-  const getApiKey = async () => {
-    const res = await fetch("https://warehousekey.azurewebsites.net/api/apikey", {
-      method: "GET"
-    })
-  
-    const json = await res.text();
-  
-    setApiKey(json);
   };
 
   const idShipments = async () => {
