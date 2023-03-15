@@ -45,7 +45,7 @@ function App() {
     console.log("Op: ", json);
   
     setApiKey(json);
-    console.log("Op2: ", apiKey);
+    // console.log("Op2: ", apiKey);
 
   };
 
@@ -63,23 +63,20 @@ function App() {
 
   useEffect(() => {
     getApiKey();
-    console.log("Here: ", apiKey)
-
   }, []);
 
 
   useEffect(() => {
-    idLs();
+    if(apiKey){
+      idLs();
+    }
 
   }, [apiKey]);
 
   useEffect(() => {
-
     if(valueSID){
       idShipments();
     }
-  
-
   }, [currShipperID]);
 
   const handleChange = (event: SelectChangeEvent) => {
