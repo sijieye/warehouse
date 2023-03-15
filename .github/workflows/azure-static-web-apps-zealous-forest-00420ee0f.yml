@@ -1,9 +1,9 @@
 name: Azure Static Web Apps CI/CD
 
 on:
-  paths:
-      - frontend/**
   push:
+    paths:
+      - frontend/**
     branches:
       - main
   pull_request:
