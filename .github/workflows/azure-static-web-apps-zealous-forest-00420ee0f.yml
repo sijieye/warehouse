@@ -26,7 +26,6 @@ jobs:
       - name: Azure CLI script
         uses: azure/CLI@v1
         with:
-          azcliversion: 2.46.0
           inlineScript: |
             az functionapp keys set -g wa_web -n warehouseautomate --key-type functionKeys --key-name rotate
       - name: Build And Deploy
