@@ -1,9 +1,10 @@
 FROM node:18-alpine as builder
 WORKDIR /home/site/wwwroot/app
-COPY package.json .
-COPY package-lock.json .
+ENV AzureWebJobsScriptRoot=/home/site/wwwroot
+COPY package.json /home/site/wwwroot/app
+COPY package-lock.json /home/site/wwwroot/app
 RUN npm install --silent
-COPY . .
+COPY . /home/site/wwwroot/app
 RUN npm run build
 
 FROM nginx:1.19.0
