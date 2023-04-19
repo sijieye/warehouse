@@ -56,12 +56,11 @@ jobs:
       - name: Lowercase the repo name and username
         run: echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
 
-      - name: Build and push container image to registry
-        uses: docker/build-push-action@v4
-        with:
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
-          file: ./frontend/Dockerfile
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USERNAME }}/azurewebapp:latest
+
+      - name: Build the Docker image
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/azurewebapp:latest
 
   deploy:
     permissions:
