@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/azure-functions/node:4-node18 as builder
 WORKDIR /wwwroot/app
 COPY package.json .
 COPY package-lock.json .
-RUN npm install --silent
+RUN NODE_ENV=development npm install --silent
 COPY . .
 RUN npm run build
 
