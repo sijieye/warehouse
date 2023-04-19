@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/azure-functions/node:4-node18 as builder
+FROM node:18-alpine as builder
 WORKDIR /wwwroot/app
 COPY package.json .
 COPY package-lock.json .
