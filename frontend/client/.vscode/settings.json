@@ -1,8 +1,0 @@
-{
-    "appService.zipIgnorePattern": [
-        "node_modules{,/**}",
-        ".vscode{,/**}"
-    ],
-    "appService.defaultWebAppToDeploy": "/subscriptions/8331191a-cbe8-4e1e-b855-96cc7fcd7ad4/resourceGroups/wa_web/providers/Microsoft.Web/sites/warehouseautomatic",
-    "appService.deploySubpath": "."
-}
