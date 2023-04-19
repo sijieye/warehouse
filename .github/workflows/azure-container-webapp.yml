@@ -57,7 +57,7 @@ jobs:
         run: echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
 
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USERNAME }}/azurewebapp:latest
+        run: docker build . --file ./frontend/Dockerfile --tag ${{ secrets.DOCKERHUB_USERNAME }}/azurewebapp:latest
 
       - name: Build the Docker image
         run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/azurewebapp:latest
@@ -81,4 +81,4 @@ jobs:
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          images: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/azurewebapp:latest
