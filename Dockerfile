@@ -2,7 +2,7 @@ FROM node:16-alpine as builder
 WORKDIR /app
 COPY /package.json .
 COPY /package-lock.json .
-RUN NODE_ENV=development npm install --silent
+RUN npm install --silent
 COPY . .
 RUN npm run build
 
