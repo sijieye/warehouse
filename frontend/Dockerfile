@@ -4,7 +4,6 @@ COPY ./frontend/package.json .
 COPY ./frontend/package-lock.json .
 RUN npm install --silent
 COPY . .
-RUN npm run build
 
 FROM nginx:1.19.0
 WORKDIR /usr/share/nginx/html
