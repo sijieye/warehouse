@@ -1,7 +1,8 @@
-FROM node:17-alpine as builder
+FROM node:18-alpine as builder
 WORKDIR /app
-COPY **/package.json **/package-lock.json ./
-RUN NODE_ENV=development npm i
+COPY package.json /app/package.json
+COPY package-lock.json /app/package-lock.json
+RUN npm install --silent
 COPY . .
 RUN npm run build
 
